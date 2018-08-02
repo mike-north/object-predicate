@@ -56,3 +56,6 @@ const isDea = toPredicate({
 });
 const deaAgents = characters.filter(isDea);
 ```
+
+---
+(c) 2018
