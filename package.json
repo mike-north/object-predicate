@@ -24,14 +24,16 @@
   "license": "MIT",
   "devDependencies": {
     "@types/qunit": "^2.0.31",
+    "bite-log": "^1.1.0",
     "ember-cli": "^3.1.4",
     "libkit": "^0.6.0",
     "qunit": "^2.4.1",
+    "qunit-decorators": "^1.1.1",
     "shelljs": "^0.7.8",
     "tslint": "^5.7.0",
-    "typescript": "^2.4.2"
+    "typescript": "^3.0.0"
   },
   "dependencies": {
-    "ts-std": "^0.6.2"
+    "@mike-north/types": "^1.0.5"
   }
 }
