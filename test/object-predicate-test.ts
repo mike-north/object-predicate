@@ -1,4 +1,4 @@
-import { toPredicate } from 'object-predicate';
+import { PredicateObject, toPredicate } from 'object-predicate';
 import { suite, test } from 'qunit-decorators';
 
 interface Character {
@@ -33,7 +33,7 @@ const EMPTY: any = {};
 export class ObjectPredicateTests {
   @test
   'single-property filtering on simple value'(assert: Assert) {
-    const pred = toPredicate<Character>({
+    const pred = toPredicate<Partial<Character>>({
       name: 'Walter White'
     });
     assert.ok(pred, 'toPredicate returns something truthy');
@@ -44,7 +44,7 @@ export class ObjectPredicateTests {
 
   @test
   'multiple-property filtering on simple values'(assert: Assert) {
-    const pred = toPredicate<Character>({ name: 'Walter White', age: 52 });
+    const pred = toPredicate<Partial<Character>>({ name: 'Walter White', age: 52 });
     assert.notOk(pred(WALTER));
     assert.notOk(pred(JESSE));
     assert.ok(pred(OLDER_WALTER));
@@ -52,7 +52,7 @@ export class ObjectPredicateTests {
 
   @test
   'property filtering on regex'(assert: Assert) {
-    const waltPred = toPredicate<Character>({ name: /Walt/ });
+    const waltPred = toPredicate<Partial<Character>>({ name: /Walt/ });
     assert.ok(waltPred(WALTER));
     assert.ok(waltPred(WALT_WHITMAN));
     assert.notOk(waltPred(JESSE));
@@ -60,8 +60,8 @@ export class ObjectPredicateTests {
 
   @test
   'property filtering on predicate'(assert: Assert) {
-    const pred = toPredicate<Character>({
-      name(s) { return !!s && s.indexOf('ss') >= 0; }
+    const pred = toPredicate<Partial<Character>>({
+      name: s => !!s && s.indexOf('ss') >= 0
     });
     assert.notOk(pred(WALTER));
     assert.notOk(pred(WALT_WHITMAN));
@@ -70,10 +70,10 @@ export class ObjectPredicateTests {
 
   @test
   'number predicate object'(assert: Assert) {
-    const pred1 = toPredicate<Character>({
+    const pred1 = toPredicate<Partial<Character>>({
       age: { gt: 30 }
     });
-    const pred2 = toPredicate<Character>({
+    const pred2 = toPredicate<Partial<Character>>({
       age: { gt: 33 }
     });
 
@@ -85,3 +85,27 @@ export class ObjectPredicateTests {
     assert.notOk(pred2(JESSE));
   }
 }
+
+interface Foo {
+  a: string;
+  d?: string[];
+  b(): boolean;
+  c(arg: string): Promise<number>;
+}
+const x: Foo = {
+  a: '',
+  b() {
+    return true;
+  },
+  c(_arg) {
+    return Promise.resolve(3);
+  },
+  d: ['d']
+};
+
+const xPartialPredObj: PredicateObject<Partial<Foo>> = { a: '' };
+const xPred: (p: Partial<Foo>) => boolean = toPredicate(xPartialPredObj);
+const yPredObj: PredicateObject<Foo> = { a: '', b: () => true, c: () => Promise.resolve(3), d: [''] };
+const yPred: (p: Foo) => boolean = toPredicate(yPredObj);
+// tslint:disable-next-line:no-unused-expression
+[xPred, yPred, x];

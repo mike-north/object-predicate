@@ -26,7 +26,7 @@ export type PropPredicate<T, K extends keyof T> = T[K] extends (number | undefin
   ? NumberPropPredicate | BasicPropPredicate<T, K>
   : BasicPropPredicate<T, K>;
 
-export type PredicateObject<T> = { [K in keyof T]: PropPredicate<T, K> };
+export type PredicateObject<T, K extends keyof T = keyof T> = { [KK in K]: PropPredicate<T, KK> };
 
 interface ValidateObjectShapeOptions<K extends string> {
   allowedProperties: K[];
@@ -69,7 +69,7 @@ function numberPredObjectToFn(p: NumberPropPredicate): (x: number) => boolean {
 }
 
 export function toPredicate<T>(
-  loc: PredicateObject<Partial<T>>
+  loc: PredicateObject<T>
 ): (item: T) => boolean {
   return (item: T) => {
     let checks: boolean[] = [];
