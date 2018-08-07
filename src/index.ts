@@ -26,7 +26,7 @@ export type PropPredicate<T, K extends keyof T> = T[K] extends (number | undefin
   ? NumberPropPredicate | BasicPropPredicate<T, K>
   : BasicPropPredicate<T, K>;
 
-export type PredicateObject<T> = { [K in keyof T]: PropPredicate<T, K> };
+export type PredicateObject<T> = { [K in keyof T]?: PropPredicate<T, K> };
 
 interface ValidateObjectShapeOptions<K extends string> {
   allowedProperties: K[];
