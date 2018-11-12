@@ -932,7 +932,7 @@
   dependencies:
     symbol-observable "^1.2.0"
 
-"@types/qunit@^2.0.31":
+"@types/qunit@2.5.3":
   version "2.5.3"
   resolved "https://registry.yarnpkg.com/@types/qunit/-/qunit-2.5.3.tgz#e7df363b5e1d1ba034b5fdd34b560d5ec0914225"
   integrity sha512-b9xNH1wBOnY+yiCT2DiAC0yi7GCF5g6whiAFA/dpd9RtL/Jn2XR7e4yyeAQwH3TUeF00zikmYqYxS0K8+EKTKQ==
@@ -1601,7 +1601,7 @@ binary-extensions@^1.0.0:
   resolved "https://registry.yarnpkg.com/binaryextensions/-/binaryextensions-2.1.1.tgz#3209a51ca4a4ad541a3b8d3d6a6d5b83a2485935"
   integrity sha512-XBaoWE9RW8pPdPQNibZsW2zh8TW6gcarXp1FZPwT8Uop8ScSNldJEWf2k9l3HeTqdrEwsOsFcq74RiJECW34yA==
 
-bite-log@^1.1.0:
+bite-log@1.6.2:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/bite-log/-/bite-log-1.6.2.tgz#250418786849a74430ddc3534ba1d726812ef79f"
   integrity sha512-KFnhPWPXF7s6jRLgiGrWxJvnvUhijRk0PazE0L0qGq2qMR7Ax4bOg5ox6/wa08IENgtzUoJjPj4zFPGqWhd0pQ==
@@ -5107,7 +5107,7 @@ humanize-ms@^1.2.1:
   dependencies:
     ms "^2.0.0"
 
-husky@^1.1.3:
+husky@1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/husky/-/husky-1.1.3.tgz#3ccfdb4d7332896bf7cd0e618c6fb8be09d9de4b"
   integrity sha512-6uc48B/A2Mqi65yeg37d/TPcTb0bZ1GTkMYOM0nXLOPuPaTRhXCeee80/noOrbavWd12x72Tusja7GJ5rzvV6g==
@@ -8229,12 +8229,12 @@ quick-temp@^0.1.2, quick-temp@^0.1.3, quick-temp@^0.1.5, quick-temp@^0.1.8:
     rimraf "^2.5.4"
     underscore.string "~3.3.4"
 
-qunit-decorators@^1.1.1:
+qunit-decorators@1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/qunit-decorators/-/qunit-decorators-1.1.2.tgz#4a61bfe8a5ac9d2dd775e9767cb551eadc21303a"
   integrity sha512-Ez8Qqlh2IZo5u/D6sFyiOX5Kq6RCy+4suRJ4KwxqckwMfivyVsdHPdDKYEbs8LvKTavxZToTU19VggsqkPXRog==
 
-qunit@^2.4.1:
+qunit@2.7.1:
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/qunit/-/qunit-2.7.1.tgz#ab93d322e46d8457d52fe4fa49d76da8cc476fec"
   integrity sha512-ePeNs/CVL8coOWxnjxQAp9mCvRJybEQw3rwJe1TUClL+WrIcaZkLeW7VxHWtshn0L0ZtY0y80JqC7+po7330Ng==
@@ -9109,7 +9109,7 @@ shebang-regex@^1.0.0:
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-1.0.0.tgz#da42f49740c0b42db2ca9728571cb190c98efea3"
   integrity sha1-2kL0l0DAtC2yypcoVxyxkMmO/qM=
 
-shelljs@^0.8.2:
+shelljs@0.8.2:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/shelljs/-/shelljs-0.8.2.tgz#345b7df7763f4c2340d584abb532c5f752ca9e35"
   integrity sha512-pRXeNrCA2Wd9itwhvLp5LZQvPJ0wU6bcjaTMywHHGX5XWhVN2nzSu7WV0q+oUY7mGK3mgSkDDzP3MgjqdyIgbQ==
