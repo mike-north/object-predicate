@@ -1,5 +1,6 @@
 'use strict';
 
 module.exports = require('libkit').build({
-  name: 'object-predicate'
+  name: 'object-predicate',
+  root: __dirname
 });
