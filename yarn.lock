@@ -761,10 +761,10 @@
     mkdirp "^0.5.1"
     rimraf "^2.5.2"
 
-"@mike-north/js-lib-renovate-config@1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@mike-north/js-lib-renovate-config/-/js-lib-renovate-config-1.1.1.tgz#1238da82936d97441991d1cb662eb8f3f3cd6bfc"
-  integrity sha512-/2aoGDisjAPaG/p2HJl9SJnrIWGmPBTzBx8IFb6oPuVbe9SOVzFowDQkiMdu87LUN3KArOPlzx5FBXw29ni5ug==
+"@mike-north/js-lib-renovate-config@1.1.4":
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/@mike-north/js-lib-renovate-config/-/js-lib-renovate-config-1.1.4.tgz#94171654fcad24c30400527a24d9c85c443771ca"
+  integrity sha512-VEGdZMPFrBltKCtIKWUXN7K5XvNy9Q09hZGSk1ZEX1n/+4QcqWNI22HxZMbUFJ/IVXTwilr8UL1ZPCsOayEybA==
 
 "@mike-north/js-lib-semantic-release-config@1.0.1":
   version "1.0.1"
@@ -10033,7 +10033,7 @@ traverse@~0.6.6:
   resolved "https://registry.yarnpkg.com/traverse/-/traverse-0.6.6.tgz#cbdf560fd7b9af632502fed40f918c157ea97137"
   integrity sha1-y99WD9e5r2MlAv7UD5GMFX6pcTc=
 
-travis-deploy-once@5.0.9, travis-deploy-once@^5.0.9:
+travis-deploy-once@^5.0.9:
   version "5.0.9"
   resolved "https://registry.yarnpkg.com/travis-deploy-once/-/travis-deploy-once-5.0.9.tgz#c5a2f639e17d8fd542f66d25ade126179d5e8acf"
   integrity sha512-cyHFErzq0HTEGY29RAq1clqFdt/IkCrlcOmyM1cGoGnEyukrrFi1fpy6JH3Mlf+88XsFwvluqKVWzj2bdz3k8A==
