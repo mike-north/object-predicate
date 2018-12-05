@@ -9,11 +9,32 @@ before_script:
 cache: yarn
 notifications:
   email: false
-node_js:
-  - '10'
-  - '8'
-script:
-  - yarn test && yarn travis-deploy-once "yarn semantic-release"
+node_js: '8'
+
+install:
+  - yarn install --no-lockfile --non-interactive
+
+stages:
+  - 'Tests'
+  - name: 'Deploy'
+    if: branch = master AND type = push
+
+jobs:
+  fail_fast: true
+  include:
+    - stage: 'Tests'
+      name: 'Conventional Commits'
+      script: commtlint-travis
+    - name: 'Fixed Dependencies'
+      install: yarn install --non-interactive
+    - name: 'Floating Dependencies'
+
+    - stage: 'Deploy'
+      name: 'Publish to npm'
+      install:
+        - yarn install --non-interactive
+      script: yarn semantic-release
+
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
