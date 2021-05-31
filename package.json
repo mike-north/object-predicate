@@ -34,7 +34,7 @@
     "@types/qunit": "2.5.4",
     "bite-log": "1.6.2",
     "ember-cli": "3.6.1",
-    "husky": "1.2.1",
+    "husky": "6.0.0",
     "libkit": "mike-north/libkit#ts-3",
     "qunit-decorators": "1.1.5",
     "qunit": "2.9.2",
