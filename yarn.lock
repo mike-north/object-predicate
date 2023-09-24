@@ -9800,10 +9800,10 @@ qunit-decorators@1.1.5:
   dependencies:
     qunit "^2.4.1"
 
-qunit@2.19.2:
-  version "2.19.2"
-  resolved "https://registry.yarnpkg.com/qunit/-/qunit-2.19.2.tgz#0b2388fd14ea8b592792b538bf31cbd20b72bfd3"
-  integrity sha512-D575YwUeTFvYu9OrCitmnZ24QkcuwwLj3vtMRLHGUvme4oVljna4Qttm19BBDC4w/7wAZr2/QvbvWN6I4inJYg==
+qunit@2.20.0:
+  version "2.20.0"
+  resolved "https://registry.yarnpkg.com/qunit/-/qunit-2.20.0.tgz#66a404a0142781316bbda91535869ce5671555b1"
+  integrity sha512-N8Fp1J55waE+QG1KwX2LOyqulZUToRrrPBqDOfYfuAMkEglFL15uwvmH1P4Tq/omQ/mGbBI8PEB3PhIfvUb+jg==
   dependencies:
     commander "7.2.0"
     node-watch "0.7.3"
